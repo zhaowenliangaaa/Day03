@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <con :num = "num" @add="add" @del="del"></con>
+
+
+    </div>
+
+</body>
+    <script>
+
+        var con = {
+            template:"<div>{{num}}<button @click='add'>+</button><button @click='del'>-</button></div>",
+            //接收属性名
+            props:['num'],
+            methods:{
+                add(){
+                  this.$emit('add')
+                },
+                del(){
+                   this.$emit('del')
+                }
+
+            }
+
+
+            }
+          var app = new Vue({
+              el:'#app',
+              data:{
+                num:0
+              },
+              components:{
+                con
+
+              },
+              methods: {
+                  add(){
+                      this.num++
+                  },
+                  del(){
+                      this.num--
+                  }
+
+              }
+
+          })
+
+    </script>
+</html>

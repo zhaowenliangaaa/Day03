@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <con></con>
+        <con></con>
+
+    </div>
+
+</body>
+    <script>
+
+        var con = {
+
+            template:"<button @click='num++'>点击加1 现在是{{num}}</button>",
+            data(){
+                return{
+                    num :0
+                }
+
+            }
+
+        }
+
+          var app = new Vue({
+                el:'#app',
+              data:{
+
+              },
+              components:{
+                    //组件名：配置对象
+                  con:con
+
+              }
+
+          })
+
+    </script>
+</html>

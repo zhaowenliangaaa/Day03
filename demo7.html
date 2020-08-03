@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+
+        <table border="1">
+            <tr>
+                <td>id</td>
+                <td>1111</td>
+                <td>2222</td>
+            </tr>
+            <tr v-for="(val,key,i) in users">
+                <td>{{i}}</td><!--下标-->
+                <td>{{key}}</td>
+                <td>{{val}}</td>
+
+            </tr>
+
+        </table>
+
+
+
+    </div>
+</body>
+    <script>
+      var app = new Vue({
+          el:"#app",
+          data:{
+              users:
+                  {name:'柳岩', gender:'女', age: 21}
+
+
+
+
+          }
+
+
+
+      })
+
+    </script>
+</html>

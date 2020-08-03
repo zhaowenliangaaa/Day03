@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+       姓名:<input v-model="name"><br>
+        性别:<input v-model="gender" type="radio" value="0">女
+            <input v-model="gender" type="radio" value="1">男<br>
+        年龄:<input v-model="age" ><br>
+        爱好：  <input v-model="hobby" type="checkbox" value="1">篮球
+             <input v-model="hobby" type="checkbox" value="2">足球
+             <input v-model="hobby" type="checkbox" value="3">看电影<br>
+        专业：<select v-model="major">
+        <option value="0">请选择</option>
+        <option value="1">大数据</option>
+        <option value="2">全站</option>
+        <option value="3">物联网</option>
+
+    </select>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el:"#app",
+            data:{
+            name:"",
+                gender:0,
+                age:null,
+                hobby:[],
+                major:0
+        }
+        });
+
+
+
+</script>
+</html>

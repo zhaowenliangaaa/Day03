@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <h1 v-if="flg">
+            if
+
+        </h1>
+        <h1 v-show="!flg">
+            show
+
+        </h1>
+        <button @click="flg=!flg">切换</button>
+
+    </div>
+</body>
+    <script>
+      var app = new Vue({
+            el:'#app',
+          data:{
+            flg:true
+
+
+          }
+
+
+      })
+
+    </script>
+</html>

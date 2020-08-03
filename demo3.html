@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="node_modules/vue/dist/vue.js"></script>
+</head>
+<body>
+
+    <div id="app">
+        <span>hello,<span v-text="name"></span></span><br>
+        <span>hello,<span v-html="name"></span></span><br>
+        <span>hello,{{name}}</span><br>
+        <span>我有{{num+10}}粉丝</span><br>
+        <span>我年龄{{getNum()}}</span>
+    </div>
+</body>
+<script>
+    var app = new Vue({
+        el:"#app",
+            data:{
+        name:"<h1>张三</h1>",
+                num:0,
+                age:20
+    },
+        methods:{
+            getNum(){
+                return this.age;
+            }
+        }
+        });
+
+
+
+</script>
+</html>
